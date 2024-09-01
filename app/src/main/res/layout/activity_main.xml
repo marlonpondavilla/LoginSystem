@@ -8,45 +8,60 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/loginPageLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="28sp"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:text="Login Page" />
+
     <EditText
         android:id="@+id/userNameField"
-        android:layout_width="match_parent"
+        android:layout_width="372dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Username"
+        android:layout_gravity="center"
         android:inputType="text" />
 
     <EditText
         android:id="@+id/pswField"
-        android:layout_width="match_parent"
+        android:layout_width="373dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="text"
-        android:hint="Password" />
+        android:hint="Password"
+        android:layout_gravity="center"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/loginBtn"
-        android:layout_width="match_parent"
+        android:layout_width="271dp"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Login"
+        android:padding="14dp"
+        android:textColorLink="#387F39" />
 
     <Button
         android:id="@+id/registerBtn"
-        android:layout_width="match_parent"
+        android:layout_width="314dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#439946"
+        android:padding="14dp"
         android:text="Register" />
 
     <TextView
-        android:id="@+id/txtDisplayInfoLog"
-        android:layout_width="wrap_content"
+        android:id="@+id/forgotPswLink"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:text="@string/underlined_text" />
 
 </LinearLayout>
-
-<!--dummy changes-->
-<!--Just example changesq-->
