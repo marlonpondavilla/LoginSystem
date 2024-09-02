@@ -3,12 +3,15 @@ package com.example.loginsystem;
 public class Users {
 
     private int id;
-    private String fullName, emailAddress, username, password, phoneNumber;
+    private String firstname, midName, lastname, emailAddress, dob, username, password, phoneNumber;
 
-    public Users(int id, String fullName, String emailAddress, String username, String password, String phoneNumber) {
+    public Users(int id, String firstname, String midName, String lastname, String emailAddress, String dob, String username, String password, String phoneNumber) {
         this.id = id;
-        this.fullName = fullName;
+        this.firstname = firstname;
+        this.midName = midName;
+        this.lastname = lastname;
         this.emailAddress = emailAddress;
+        this.dob = dob;
         this.username = username;
         this.password = password;
         this.phoneNumber = phoneNumber;
@@ -22,20 +25,28 @@ public class Users {
         this.id = id;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getUsername() {
-        return username;
+    public String getMidName() {
+        return midName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setMidName(String midName) {
+        this.midName = midName;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getEmailAddress() {
@@ -44,6 +55,22 @@ public class Users {
 
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
