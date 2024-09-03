@@ -48,4 +48,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-//pag eto ayaw paren delete to
