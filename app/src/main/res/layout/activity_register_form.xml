@@ -12,12 +12,13 @@
         android:id="@+id/registrationLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registration Page"
+        android:layout_marginTop="35sp"
         android:gravity="center"
+        android:text="Registration Page"
         android:textSize="28sp"
         android:textStyle="bold"
+        android:textColor="#000"
         tools:layout_editor_absoluteX="150dp"
-        android:layout_marginTop="35sp"
         tools:layout_editor_absoluteY="43dp" />
 
     <TextView
@@ -110,7 +111,7 @@
         android:minHeight="48dp" />
 
     <EditText
-        android:id="@+id/editTextTextPassword1"
+        android:id="@+id/confirmPass"
         android:layout_width="362dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -127,6 +128,8 @@
         android:layout_marginTop="10dp"
         android:padding="16dp"
         android:textSize="16sp"
+        android:background="@drawable/round_btn_green"
+        android:textColor="#FFFF"
         android:text="Submit" />
 
 </LinearLayout>
