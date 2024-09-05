@@ -128,7 +128,7 @@ public class RegisterForm extends AppCompatActivity {
                         submitUserData();
                     }
                     else{
-                        System.out.println("JUMPED SUBMITTING DATA!!!!!");
+                        Toast.makeText(RegisterForm.this, "Error user registering", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
