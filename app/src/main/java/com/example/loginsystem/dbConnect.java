@@ -2,6 +2,7 @@ package com.example.loginsystem;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
@@ -71,12 +72,35 @@ public class dbConnect extends SQLiteOpenHelper {
             if (result == -1) {
                 Toast.makeText(context, "Database insertion failed", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(context, "Record added successfully", Toast.LENGTH_SHORT).show();
+                System.out.println("Records added to the database");
             }
         } catch (Exception e) {
             Toast.makeText(context, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
         } finally {
-            DB.close(); // Always close the database
+            DB.close();
+        }
+    }
+
+    public Boolean isUsernameExist(String username){
+        SQLiteDatabase DB = this.getReadableDatabase();
+        Cursor cursor = DB.rawQuery("SELECT USERNAME FROM USERS WHERE USERNAME = ?", new String[] {username});
+
+        if(cursor.getCount() > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public Boolean checkUsernameAndPassword(String username, String password){
+        SQLiteDatabase DB = this.getReadableDatabase();
+        Cursor cursor = DB.rawQuery("SELECT USERNAME, PASSWORD FROM USERS WHERE USERNAME = ? AND PASSWORD = ?", new String[] {username, password});
+        if(cursor.getCount() > 0){
+            return true;
+        }
+        else{
+            return false;
         }
     }
 }

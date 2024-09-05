@@ -19,6 +19,15 @@
         android:textColor="#000"
         android:text="Login Page" />
 
+    <TextView
+        android:id="@+id/loginErrorLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:textColor="#F5004F"
+        android:visibility="gone"/>
+
     <EditText
         android:id="@+id/userNameField"
         android:layout_width="372dp"
