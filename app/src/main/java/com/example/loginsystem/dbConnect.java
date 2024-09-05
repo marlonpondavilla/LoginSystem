@@ -71,8 +71,6 @@ public class dbConnect extends SQLiteOpenHelper {
             long result = DB.insert(dbTable, null, values);
             if (result == -1) {
                 Toast.makeText(context, "Database insertion failed", Toast.LENGTH_SHORT).show();
-            } else {
-                System.out.println("Records added to the database");
             }
         } catch (Exception e) {
             Toast.makeText(context, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
@@ -83,24 +81,16 @@ public class dbConnect extends SQLiteOpenHelper {
 
     public Boolean isUsernameExist(String username){
         SQLiteDatabase DB = this.getReadableDatabase();
-        Cursor cursor = DB.rawQuery("SELECT USERNAME FROM USERS WHERE USERNAME = ?", new String[] {username});
+        try (Cursor cursor = DB.rawQuery("SELECT USERNAME FROM USERS WHERE USERNAME = ?", new String[]{username})) {
 
-        if(cursor.getCount() > 0){
-            return true;
-        }
-        else{
-            return false;
+            return cursor.getCount() > 0;
         }
     }
 
     public Boolean checkUsernameAndPassword(String username, String password){
         SQLiteDatabase DB = this.getReadableDatabase();
         Cursor cursor = DB.rawQuery("SELECT USERNAME, PASSWORD FROM USERS WHERE USERNAME = ? AND PASSWORD = ?", new String[] {username, password});
-        if(cursor.getCount() > 0){
-            return true;
-        }
-        else{
-            return false;
-        }
+
+        return cursor.getCount() > 0;
     }
 }
