@@ -33,7 +33,7 @@
 
     <EditText
         android:id="@+id/lastNameField"
-        android:layout_width="361dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
@@ -43,7 +43,7 @@
 
     <EditText
         android:id="@+id/middleNameField"
-        android:layout_width="361dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
@@ -53,7 +53,7 @@
 
     <EditText
         android:id="@+id/firstNameField"
-        android:layout_width="359dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
@@ -63,37 +63,37 @@
 
     <EditText
         android:id="@+id/dateOfBirth"
-        android:layout_width="361dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
-        android:hint="Date of birth"
-        android:inputType="text"
+        android:hint="Date of birth (mm/dd/yyyy)"
+        android:inputType="datetime"
         android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/emailAddressField"
-        android:layout_width="361dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
         android:hint="Email address"
-        android:inputType="text"
+        android:inputType="textEmailAddress"
         android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/phoneNumber"
-        android:layout_width="362dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
         android:hint="Phone Number"
-        android:inputType="text"
+        android:inputType="phone"
         android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/createUserNameField"
-        android:layout_width="362dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
@@ -103,7 +103,7 @@
 
     <EditText
         android:id="@+id/passwordField"
-        android:layout_width="362dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"
@@ -113,7 +113,7 @@
 
     <EditText
         android:id="@+id/confirmPass"
-        android:layout_width="362dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:ems="10"

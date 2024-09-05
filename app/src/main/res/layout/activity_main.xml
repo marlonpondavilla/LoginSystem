@@ -30,7 +30,7 @@
 
     <EditText
         android:id="@+id/userNameField"
-        android:layout_width="372dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Username"
@@ -39,12 +39,12 @@
 
     <EditText
         android:id="@+id/pswField"
-        android:layout_width="373dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Password"
         android:layout_gravity="center"
-        android:inputType="text" />
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/loginBtn"

@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     hideLoginErrMsg();
                     if(!areCredentialsValid()){
-                        showLoginErrMsg("Credentials do not exist in our system!");
+                        showLoginErrMsg("Username or password is incorrect");
                     }
                     else{
                         Toast.makeText(MainActivity.this, "Login Successfully", Toast.LENGTH_SHORT).show();

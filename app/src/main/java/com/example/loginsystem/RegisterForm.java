@@ -42,7 +42,7 @@ public class RegisterForm extends AppCompatActivity {
         Users user1 = new Users(1, firstNameStr, midNameStr, lastNameStr, emailAddressStr, dobStr, usernameStr, pswStr, phoneNumberStr);
         myDb = new dbConnect(RegisterForm.this);
         try {
-            //myDb.addUser(user1);
+            myDb.addUser(user1);
             Toast.makeText(RegisterForm.this, "Submitted successfully", Toast.LENGTH_SHORT).show();
             clearAllFields();
         } catch (Exception e) {
@@ -123,12 +123,13 @@ public class RegisterForm extends AppCompatActivity {
                 }
                 else {
                     hideEmptyFieldsHandler();
-
-                    if (!isPasswordMismatch() && !isUsernameExists()){
-                        submitUserData();
+                    try {
+                        if (!isPasswordMismatch() && !isUsernameExists()){
+                            submitUserData();
+                        }
                     }
-                    else{
-                        Toast.makeText(RegisterForm.this, "Error user registering", Toast.LENGTH_SHORT).show();
+                    catch (Exception e){
+                        Toast.makeText(RegisterForm.this, "Error" + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
             }
